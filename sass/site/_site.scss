@@ -1,0 +1,249 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+@import "primary/asides";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+.no-scroll {
+	overflow: hidden;
+}
+
+header.site-header{
+	height: 680px;
+	height: 90vh;
+	position: relative;
+	.site-branding {
+		background-repeat: none;
+		background-attachment: fixed;
+		background-position: center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100%;
+		text-align: center;
+		.brand-box {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			z-index: 50;
+			padding-left: 1em;
+			padding-right: 1em;
+			@include translate(-50%, -60%);
+			img {
+				margin-bottom: 20px;
+				max-width: 40%;
+				@include breakpoint($medium){
+					width: auto;
+					margin-bottom: 100px;
+				}
+			}
+			h2 {
+				color: #fff;
+				letter-spacing: 4px;
+				line-height: 116%;
+				text-transform: uppercase;
+				em {
+					font-style: italic;
+				}
+				@include breakpoint($medium){
+					@include font-size(3.4);
+					letter-spacing: 8px;
+				}
+			}
+			@include breakpoint($medium) {
+				padding: 0;
+			}
+		}
+	}
+	.header-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('images/bg-headeroverlay.png');
+		background-attachment: fixed;
+		background-repeat: none;
+		background-position: center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		z-index: 10;
+	}
+}
+
+.site-footer {
+    padding: 2em;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #fff;
+    color: hsl(0, 0%, 100%);
+    background: #313131;
+    background: hsl(0, 0%, 19%);
+    a {
+	    color: #fff;
+	    color: hsl(0, 0%, 100%);
+	}
+	.site-info { 
+	    text-align: center; 
+	}
+}
+
+.site-info {
+	background: $darkest;
+	padding: 4em 2em;
+	.copyright{
+		font-family: $paragraph;
+		@include font-size(.875);
+		opacity: .8;
+		text-transform: uppercase;
+		@include container(95%);
+		@include breakpoint($large){
+			@include container(90%);
+		}
+		@include breakpoint($wide){
+			@include container(80%);
+		}
+	}
+}
+
+.home .site-content {
+	padding-bottom: 0;
+}
+
+.blog-previews {
+	clear: both;
+	background: $bloggrey;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	.prevs-inner {
+		h2 {
+			color: #fff;
+			text-align: center;
+			@include font-size(2.4);
+			text-transform: uppercase;
+			margin-bottom: 2em;
+		}
+		@include container(90%);
+		@include breakpoint($mid){
+			@include container(70%);
+		}
+		.post {
+			margin-bottom: 2em;
+			@include breakpoint($large){
+				@include span(2 of 4);
+				margin-bottom: 0;
+			}
+			background: #fff;
+			padding: 2em;
+			font-family: $paragraph;
+			@include cf;
+			@include box-shadow(0 0 15px rgba($navgrey, .8));
+			h3 {
+				font-family: $headline;
+				padding-bottom: 1.5em;
+				margin-bottom: 1.5em;
+				@include font-size(2);
+				border-bottom: 1px solid $navgrey;
+				a {
+					color: #000;
+				}
+			}
+			a.rdmore {
+				font-family: $headline;
+				color: #fff;
+				float: right;
+				text-transform: capitalize;
+				background: $lightgrey;
+				@include font-size(1);
+				padding: 8px 12px;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+.home .custom-content .content {
+	clear: both;
+}
+
+.service-buckets {
+	background: $verylight;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	.inside{
+		@include container(80%);
+		h2 {
+			color: $bloggrey;
+			text-align: center;
+			@include font-size(2.4);
+			text-transform: uppercase;
+			margin-bottom: 2em;
+		}
+		.bucket {
+			text-align: center;
+			@include breakpoint($large){
+				@include span(2 of 6);
+			}
+			h3 {
+				@include font-size(2);
+				text-transform: uppercase;
+				margin-top: 16px;
+				margin-bottom: 16px;
+			}
+			.fa {
+				@include font-size(7);
+				color: $green;
+				@include text-shadow(8px 8px $navgrey);
+				background: $logogrey;
+				text-align: center;
+				padding: 60px;
+				@include border-radius(50%);
+			}
+			p {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.flavor {
+	@include bgImage('images/bg-flavor.jpg');
+	@include cf;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	.inside {
+		@include container(80%);
+		img.graph {
+			margin: 0 auto;
+			display: block;
+			@include breakpoint($mid){
+				@include span(3 omega);
+			}
+		}
+		.thetext {
+			@include breakpoint($mid){
+				@include span(7);
+			}
+			h2 {
+				@include font-size(2.4);
+			}
+		}
+	}
+}

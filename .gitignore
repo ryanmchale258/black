@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+.tmp
+.sass-cache
+/Black Mountain/nbproject/private/
+/nbproject/private/

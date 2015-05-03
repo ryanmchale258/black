@@ -1,0 +1,69 @@
+/*
+Theme Name: my-simone
+Layout: No sidebar
+*/
+/*--------------------------------------------------------------
+# Compass et al
+--------------------------------------------------------------*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.page .site-content {
+  background: #fff;
+  padding-top: 80px;
+}
+
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+
+.entry-header,
+.page-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation {
+  position: relative;
+  max-width: 780px;
+  max-width: 78rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+@media (min-width: 800px) {
+  .entry-header,
+  .page-header,
+  .entry-content,
+  .entry-footer,
+  .tag-links,
+  .post-navigation,
+  .comments-area,
+  .paging-navigation {
+    padding: 0 4rem;
+  }
+}
+
+.page-header,
+.paging-navigation {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  list-style-type: none;
+  background: #fff;
+}
+
+.page-header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.image-shifter {
+  width: auto;
+  float: none;
+  margin-left: 0;
+}

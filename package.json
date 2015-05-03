@@ -1,0 +1,18 @@
+{
+  "name": "blackmountain",
+  "version": "1.0.0",
+  "description": "New Site for Greg Hamblin of Black Mountain Marketing",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan McHale",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.6.5",
+    "compass": "^0.1.1",
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.0.4",
+    "gulp-util": "^3.0.4"
+  }
+}

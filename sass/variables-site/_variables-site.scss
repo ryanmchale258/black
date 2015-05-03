@@ -1,0 +1,21 @@
+@include border-box-sizing; //better border box sizing for layout
+
+// Grid Setup
+$susy: (
+	columns         : 12,
+	container       : 60em,
+	gutters         : .25,
+	gutter-position : split
+);
+
+// Breakpoints
+$narrow   : 400px;
+$small    : 650px;
+$mid      : 800px;
+$medium   : 960px;
+$large    : 1140px;
+$wide     : 1270px;
+
+@import "colors";
+@import "typography";
+@import "structure";

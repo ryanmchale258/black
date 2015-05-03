@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+# Compass et al
+--------------------------------------------------------------*/
+@import "compass";
+@import "compass/CSS3/text-shadow";
+@import "compass/CSS3/box-shadow";
+@import "compass/CSS3/border-radius";
+@import "compass/CSS3/transition";
+@import "compass/CSS3/transform";
+@import "compass/CSS3/animation";
+@import "breakpoint";
+@import "susy";
+
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+body {
+	padding-top: 77px;
+}
+
+.content-area {
+	@include breakpoint($large){
+		float: left;
+		margin-left: -380px;
+		padding-left: 380px;
+		width: 100%;
+	}
+}
+
+.site-content {
+	padding-bottom: 4em;
+	background: darken(#fff, 20);
+}
+
+.single .site-content {
+	background: #fff;
+}
+
+.page .site-content {
+	background: #fff;
+}
+
+.site-content .widget-area {
+	max-width: 1000px;
+	max-width: 62.5rem;
+	padding: 0 4rem;
+	margin: 1em auto 0;
+	@include breakpoint($large){
+		float: right;
+		padding: 4rem;
+		background: #fff;
+		width: 380px;
+		margin: 0;
+	}
+}
+
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+.entry-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.index-box,
+.post-navigation,
+.comments-area,
+.page-header,
+.paging-navigation {
+	position: relative;
+	max-width: 1000px;
+	max-width: 62.5rem;
+	padding: 0 1rem;
+	margin: 0 auto;
+	@include breakpoint($large){
+		margin-right: 0 !important;
+		padding: 0 4rem;
+	}
+}
+
+.index-box {
+    max-width: 1000px;
+    max-width: 62.5rem;
+    padding: 1em 0 2em;
+    margin: 0 auto 2em;
+    background: #fff;
+}
+
+.index-box blockquote.alignleft,
+.index-box blockquote.alignright {
+    background: #fff;
+    border: none;
+}
+
+@media screen and (min-width: 1820px) {
+    .index-box blockquote.alignright { padding-right: 2em; }
+}
+
+@media screen and (min-width: 1320px) {
+    .index-box blockquote.alignleft { padding-left: 2em; }
+}
+
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: #fff;
+}
+
+.page-header,
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: #fff;
+}
+
+.page-header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

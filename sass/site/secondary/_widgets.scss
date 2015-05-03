@@ -1,0 +1,144 @@
+.widget {
+	ul,
+	ol {
+	    padding: 0;
+	    margin: -1em 0 0;
+	    list-style-type: none;
+	}
+
+	li { padding: 1em 0 0; }
+
+	li ul,
+	li ol { margin-top: 0; }
+
+	li li { margin-left: 1.5em; }
+
+	margin: 0 0 4em;
+	font-family: $paragraph;
+	@include font-size(1);
+
+	.widget-title {
+		@include font-size(2);
+		margin-bottom: 1em;
+		border-bottom: 2px solid $navgrey;
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+	a {
+		font-weight: 700;
+		color: #000;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+.footer-widgets {
+	width: 100% !important;
+	margin: 0 auto;
+	@include breakpoint($mid){
+		//width: auto;
+	}
+	.widget-title,
+	.widget a:hover {
+	    color: #fff;
+	    border-bottom: 2px solid #fff;
+	}
+
+	.widget {
+		float: none;
+        width: 100%;
+        margin: 0 0 8rem;
+		@include breakpoint($mid){
+			float: left;
+		    width: 320px;
+		    margin: 0 4rem 2rem 4rem;
+		}
+	}
+}
+
+#text-2 {
+	@include breakpoint($mid){
+		width: 600px;
+	}
+	h1 {
+		border-bottom: 0;
+		text-transform: uppercase;
+		@include font-size(1.6875);
+		margin-bottom: -20px;
+	}
+	input, textarea {
+		background: $darkest;
+		border: none;
+		color: #fff;
+		outline: none;
+		@include border-radius(10px);
+		&::-webkit-input-placeholder { /* WebKit browsers */
+		   color: $navgrey;
+		}
+		&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color: $navgrey;
+		}
+		&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color: $navgrey;
+		}
+		&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		   color: $navgrey;
+		}
+	}
+	textarea {
+		resize: resize-y;
+		height: 100px;
+		padding: 10px;
+	}
+	input[type="text"],
+	input[type="email"] {
+		width: 60%;
+		padding: 10px;
+	}
+	input[type="submit"]{
+		float: right;
+		background: none;
+		border: none;
+		outline: none;
+		background: $darkest;
+		color: #fff;
+		cursor: pointer;
+		margin-top: 55px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		text-shadow: none;
+		@include font-size(1.1);
+		box-shadow: none;
+		font-family: $headline;
+		text-transform: uppercase;
+		display: block;
+		@include breakpoint($mid){
+			padding: 40px 30px;
+			margin-top: 55px;
+			margin-right: 50px;
+		}
+	}
+}
+
+#nav_menu-2 {
+	width: 180px;
+	li{
+		&:last-child a {
+			border-bottom: 0;
+		}
+		padding: 0;
+		a {
+			line-height: 50px;
+			border-bottom: 1px solid #fff;
+			width: 100%;
+			text-transform: uppercase;
+			display: block;
+		}
+	}
+}
